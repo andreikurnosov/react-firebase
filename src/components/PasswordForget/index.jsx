@@ -32,7 +32,7 @@ const PasswordForgetFormBase = (props) => {
   }
 
   function isInvalid() {
-    if (email === '') false
+    if (email === '') true
   }
 
   return (
@@ -44,7 +44,7 @@ const PasswordForgetFormBase = (props) => {
         type="text"
         placeholder="Email Address"
       />
-      <button disabled={error} type="submit">
+      <button disabled={isInvalid()} type="submit">
         Reset My Password
       </button>
 
